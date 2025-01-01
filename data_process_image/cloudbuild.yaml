@@ -1,0 +1,16 @@
+steps:
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t',
+           '$_LOCATION-docker.pkg.dev/$_PROJECT/subtlemedical-data-preprocess/preprocess',
+           '.']
+
+  # Docker Push
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push',
+           '$_LOCATION-docker.pkg.dev/$_PROJECT/subtlemedical-data-preprocess/preprocess']
+
+substitutions:
+    _PROJECT: "default-project-id"
+    _LOCATION: "asia-southeast1"
+

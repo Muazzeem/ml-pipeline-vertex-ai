@@ -1,0 +1,17 @@
+steps:
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t',
+           '$_LOCATION-docker.pkg.dev/$_PROJECT/subtlemedical-ml-train/train-model',
+           '.']
+
+  # Docker Push
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push',
+           '$_LOCATION-docker.pkg.dev/$_PROJECT/subtlemedical-ml-train/train-model']
+
+substitutions:
+    _PROJECT: "bitstrapped-gpu-testing"
+    _LOCATION: "asia-southeast1"
+
+# gcloud builds submit --substitutions=_PROJECT="bitstrapped-gpu-testing",_LOCATION="asia-southeast1"

@@ -1,0 +1,5 @@
+nibabel==3.2.1
+numpy
+scipy==1.11.1
+google-cloud-storage==2.10.0
+gcsfs==2023.6.0

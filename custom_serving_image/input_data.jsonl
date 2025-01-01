@@ -1,0 +1,2 @@
+{"gcs_path": "gs://subtlemedical-demo-bucket/raw/train/IXI002-Guys-0828", "input_combination": [1, 2], "targets": [0]}
+{"gcs_path": "gs://subtlemedical-demo-bucket/raw/train/IXI012-HH-1211", "input_combination": [1, 2], "targets": [0]}
